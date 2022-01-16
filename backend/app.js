@@ -8,7 +8,7 @@ const path = require('path');
 const placesRoutes = require('./routes/places-routes');
 const usersRoutes = require('./routes/users-routes');
 
-const HttpError = require('./models/http-error');
+const HttpError = require('./middleware/http-error');
 
 const app = express();
 
@@ -48,7 +48,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    `mongodb+srv://Araraef22:P3MOglMyOqwXvgX1@cluster0.fwsyw.mongodb.net/placeReviewer2`
+    `mongodb+srv://Araraef22:j2vJPMeCJzd2ii8@cluster0.fwsyw.mongodb.net/placeReviewer2`
   )
   .then(() => {
     app.listen(5000);
